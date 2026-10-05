@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Resonance — a student music store. Find your guitar, piano, keyboard, drums or violin.">
+        <title>Resonance — Find your sound</title>
+        <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body id="top">
+        <!-- Header -->
+        <header>
+            <div class="container header-content">
+                <a class="logo" href="#top">
+                    <span class="logo-mark">r.</span>
+                    Resonance
+                </a>
+                <nav aria-label="Main navigation">
+                    <a href="#catalog">Instruments</a>
+                    <a href="#about">Our story</a>
+                    <a href="#questions">How to order</a>
+                </nav>
+                <button class="cart-button" onclick="openCart()">
+                    Cart
+                    <span id="cart-count" aria-live="polite">0</span>
+                </button>
+            </div>
+        </header>
+        <main>
+            <!-- Hero section -->
+            <section class="container hero">
+                <div>
+                    <p class="eyebrow">FOR THE LOVE OF MUSIC</p>
+                    <h1>
+                        Your rhythm.
+                        <br>
+                        Your story.
+                        <br>
+                        <span>Your sound.</span>
+                    </h1>
+                    <p class="hero-description">From your first chord to your own stage. Find an instrument that makes you want to play every day.</p>
+                    <a class="button" href="#catalog">Find your instrument ↗</a>
+                    <p class="hero-note">A little curiosity. A lot of possibilities.</p>
+                </div>
+                <div class="hero-art">
+                    <p class="art-label">THE SOUND OF YOU / VOL. 01</p>
+                    <span class="hero-word" aria-hidden="true">PLAY</span>
+                    <img src="assets/electric.svg" alt="Illustration of a blue electric guitar" width="420" height="540">
+                    <p class="art-caption">
+                        More than an instrument.
+                        <br>
+                        <strong>A way to express yourself.</strong>
+                    </p>
+                </div>
+            </section>
+            <div class="category-strip">
+                <div class="container">
+                    <span>STRINGS</span>
+                    <span>✳</span>
+                    <span>KEYS</span>
+                    <span>✳</span>
+                    <span>RHYTHM</span>
+                    <span>✳</span>
+                    <span>INSPIRATION</span>
+                </div>
+            </div>
+            <!-- The product cards are added by script.js. -->
+            <section id="catalog" class="container section">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">01 / THE COLLECTION</p>
+                        <h2>
+                            Find your instrument<span>.</span>
+                        </h2>
+                    </div>
+                    <p>
+                        Every sound starts somewhere.
+                        <br>
+                        Yours starts here.
+                    </p>
+                </div>
+                <div class="filters" role="group" aria-label="Instrument categories">
+                    <button class="filter active" onclick="showProducts('All', this)" aria-pressed="true">All instruments</button>
+                    <button class="filter" onclick="showProducts('Guitars', this)" aria-pressed="false">Guitars</button>
+                    <button class="filter" onclick="showProducts('Pianos', this)" aria-pressed="false">Pianos</button>
+                    <button class="filter" onclick="showProducts('Keyboards', this)" aria-pressed="false">Keyboards</button>
+                    <button class="filter" onclick="showProducts('Drums', this)" aria-pressed="false">Drums</button>
+                    <button class="filter" onclick="showProducts('Violins', this)" aria-pressed="false">Violins</button>
+                </div>
+                <p id="product-count" class="small-text" role="status"></p>
+                <div id="product-list" class="product-grid"></div>
+                <noscript>
+                    <p>Please enable JavaScript to view the instruments and use the cart.</p>
+                </noscript>
+            </section>
+            <!-- About the store -->
+            <section id="about" class="container about section">
+                <div class="about-art">
+                    <p class="eyebrow">A SHARED LOVE OF MUSIC</p>
+                    <h2>
+                        Music brings
+                        <br>
+                        us together<span>.</span>
+                    </h2>
+                    <img src="assets/synth.svg" alt="Illustration of a keyboard" width="420" height="540" loading="lazy">
+                </div>
+                <div class="about-text">
+                    <p class="eyebrow">02 / OUR STORY</p>
+                    <h2>
+                        We started with
+                        <br>
+                        a first chord, too.
+                    </h2>
+                    <p>Resonance is a student project inspired by a simple idea: choosing an instrument should feel exciting and easy.</p>
+                    <p>Explore different sounds, compare instruments and put together your own collection. Whether you are a beginner or a music lover, there is a place for you here.</p>
+                    <a class="text-link" href="#catalog">Explore the collection ↗</a>
+                </div>
+            </section>
+            <!-- These questions open without JavaScript. -->
+            <section id="questions" class="container questions section">
+                <div>
+                    <p class="eyebrow">03 / GOOD TO KNOW</p>
+                    <h2>A good question.</h2>
+                    <p class="small-text">A few notes before your first order.</p>
+                </div>
+                <div class="question-list">
+                    <details>
+                        <summary>How do I choose an instrument?</summary>
+                        <p>Choose a category and open a product card. Read the description, compare the prices and add your favourite instruments to the cart.</p>
+                    </details>
+                    <details>
+                        <summary>How do I place an order?</summary>
+                        <p>Open your cart, enter your name and prepare an order. Then open WhatsApp, check the recipient and send the message yourself.</p>
+                    </details>
+                    <details>
+                        <summary>Do I need an account?</summary>
+                        <p>No. You can explore the collection and prepare an order without signing in.</p>
+                    </details>
+                    <details>
+                        <summary>Can I pay on this website?</summary>
+                        <p>This is a student store. Products and prices are examples, illustrations show instrument types, and the website does not accept payments.</p>
+                    </details>
+                </div>
+            </section>
+            <section class="container closing-banner">
+                <div>
+                    <p class="eyebrow">START WITH A SINGLE NOTE</p>
+                    <h2>
+                        It all starts
+                        <br>
+                        with your sound.
+                    </h2>
+                </div>
+                <a class="button button-light" href="#catalog">Explore instruments ↗</a>
+            </section>
+        </main>
+        <footer class="container">
+            <div class="footer-top">
+                <a class="logo" href="#top">
+                    <span class="logo-mark">r.</span>
+                    Resonance
+                </a>
+                <p>Your music starts here.</p>
+                <a href="#top">Back to top ↑</a>
+            </div>
+            <p class="footer-note">© 2026 Resonance · Student project · Illustrative products and prices</p>
+        </footer>
+        <!-- Product window -->
+        <dialog id="product-dialog" aria-labelledby="product-title">
+            <form method="dialog">
+                <button class="close-button" aria-label="Close product">×</button>
+            </form>
+            <div class="product-details">
+                <img id="detail-image" src="assets/acoustic.svg" alt="" width="420" height="540">
+                <div>
+                    <p id="detail-category" class="eyebrow"></p>
+                    <h2 id="product-title"></h2>
+                    <p id="detail-description"></p>
+                    <p id="detail-price" class="price"></p>
+                    <button class="button" onclick="addToCart(selectedProduct)">Add to cart +</button>
+                </div>
+            </div>
+        </dialog>
+        <!-- Cart and a simple order form -->
+        <dialog id="cart-dialog" class="cart-dialog" aria-labelledby="cart-title">
+            <form method="dialog">
+                <button class="close-button" aria-label="Close cart">×</button>
+            </form>
+            <p class="eyebrow">YOUR SELECTION</p>
+            <h2 id="cart-title">
+                Your cart<span>.</span>
+            </h2>
+            <div id="cart-items"></div>
+            <p class="cart-total">
+                Total
+                <strong id="cart-total">0 ₸</strong>
+            </p>
+            <p id="storage-message" class="small-text" role="status"></p>
+            <form id="order-form" onsubmit="prepareOrder(event)">
+                <label for="customer-name">Your name</label>
+                <input id="customer-name" name="name" placeholder="For example, Alex" autocomplete="given-name" required minlength="2" maxlength="40" oninput="hideOrderLink()">
+                <button class="button" type="submit">Prepare order ↗</button>
+                <p class="small-text">You will review and send the message in WhatsApp.</p>
+            </form>
+            <div id="order-result" hidden>
+                <p class="small-text">Your message is ready. Check the recipient before sending.</p>
+                <a id="order-link" class="button" target="_blank" rel="noopener noreferrer">Open WhatsApp ↗</a>
+            </div>
+            <button class="text-link" onclick="document.getElementById('cart-dialog').close()">Continue browsing</button>
+        </dialog>
+        <!-- Load the data before the functions that use it. -->
+        <script src="products.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
